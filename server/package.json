@@ -1,0 +1,21 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsx src/index.ts"
+  },
+  "dependencies": {
+    "@dimforge/rapier3d-compat": "^0.14.0",
+    "uuid": "^9.0.1",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/uuid": "^9.0.8",
+    "@types/ws": "^8.5.10",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  }
+}

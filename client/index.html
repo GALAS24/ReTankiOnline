@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retanki Reborn</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            user-select: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #0e1116;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, monospace, sans-serif;
+            color: #fff;
+        }
+
+        /* 3D Контейнер рендера Three.js */
+        #webgl-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        /* Общие правила экранов UI */
+        .screen {
+            display: none;
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        .screen.active {
+            display: flex;
+        }
+
+        .screen > * {
+            pointer-events: auto;
+        }
+
+        /* ============================================================
+           ИНТЕРФЕЙС АНГАРА (ГАРАЖ)
+           ============================================================ */
+        #garage-screen {
+            flex-direction: column;
+        }
+
+        .garage-topbar {
+            height: 52px;
+            background: linear-gradient(180deg, #2a2f38 0%, #16191d 100%);
+            border-bottom: 2px solid #434a54;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.85);
+            z-index: 20;
+        }
+
+        .logo-title {
+            font-size: 20px;
+            font-weight: 900;
+            color: #e5b326;
+            letter-spacing: 1.5px;
+            text-shadow: 0 0 10px rgba(229, 179, 38, 0.4);
+        }
+
+        .garage-subtitle {
+            font-size: 13px;
+            color: #8b97a7;
+            margin-left: 8px;
+            font-family: monospace;
+        }
+
+        .topbar-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .btn-debug-top {
+            background: #1e293b;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: monospace;
+            font-size: 12px;
+            transition: all 0.15s ease;
+        }
+
+        .btn-debug-top:hover {
+            background: #0284c7;
+            color: #fff;
+        }
+
+        .btn-battle-glow {
+            background: linear-gradient(180deg, #22c55e 0%, #15803d 100%);
+            color: #fff;
+            font-size: 16px;
+            font-weight: 900;
+            padding: 10px 36px;
+            border: 1px solid #4ade80;
+            border-radius: 4px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.45);
+            transition: transform 0.1s ease, filter 0.2s ease;
+        }
+
+        .btn-battle-glow:hover {
+            filter: brightness(1.15);
+            transform: scale(1.03);
+        }
+
+        .garage-main-layout {
+            flex: 1;
+            display: flex;
+            padding: 24px;
+            align-items: flex-start;
+        }
+
+        .garage-panel {
+            width: 360px;
+            height: calc(100vh - 120px);
+            background: rgba(20, 23, 28, 0.94);
+            border: 2px solid #434a54;
+            border-radius: 6px;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(8px);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .garage-tabs {
+            display: flex;
+            background: #13161a;
+            border-bottom: 2px solid #383e47;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 12px 0;
+            background: transparent;
+            border: none;
+            color: #8a96a3;
+            font-weight: 800;
+            font-size: 13px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .tab-btn:hover {
+            color: #f1f5f9;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .tab-btn.active {
+            color: #e5b326;
+            background: #1c2026;
+            border-bottom: 3px solid #e5b326;
+        }
+
+        .garage-items-grid {
+            flex: 1;
+            overflow-y: auto;
+            padding: 12px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 105px;
+            gap: 10px;
+        }
+
+        .garage-items-grid::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .garage-items-grid::-webkit-scrollbar-thumb {
+            background: #3b424c;
+            border-radius: 3px;
+        }
+
+        .item-card {
+            background: linear-gradient(180deg, #242930 0%, #191c20 100%);
+            border: 1px solid #3c4450;
+            border-radius: 4px;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: transform 0.1s, border-color 0.15s, background 0.15s;
+        }
+
+        .item-card:hover {
+            border-color: #64748b;
+            transform: translateY(-2px);
+        }
+
+        .item-card.installed {
+            border-color: #22c55e;
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+            background: linear-gradient(180deg, #1d2c20 0%, #131c15 100%);
+        }
+
+        .item-card-preview {
+            width: 58px;
+            height: 58px;
+            object-fit: contain;
+            border-radius: 3px;
+        }
+
+        .item-card-name {
+            font-size: 11px;
+            font-weight: 800;
+            color: #cbd5e1;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .item-details-card {
+            padding: 14px;
+            background: #14171a;
+            border-top: 1px solid #343b44;
+        }
+
+        .detail-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+        }
+
+        #detail-name {
+            font-size: 15px;
+            font-weight: 900;
+            color: #e5b326;
+        }
+
+        #detail-tier {
+            font-size: 11px;
+            background: #2a3038;
+            color: #38bdf8;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        #detail-desc {
+            font-size: 11px;
+            color: #94a3b8;
+            line-height: 1.4;
+            min-height: 32px;
+            margin-bottom: 10px;
+        }
+
+        .btn-install {
+            width: 100%;
+            padding: 10px 0;
+            font-weight: 800;
+            font-size: 12px;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background: #22c55e;
+            color: #000;
+            box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+        }
+
+        .btn-install.active-item {
+            background: #374151;
+            color: #9ca3af;
+            cursor: default;
+        }
+
+        /* ============================================================
+           БОЕВОЙ HUD И ОПОВЕЩЕНИЯ
+           ============================================================ */
+        #flip-alert {
+            display: none;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(239, 68, 68, 0.9);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 0 25px rgba(239, 68, 68, 0.7);
+            z-index: 50;
+            pointer-events: none;
+        }
+
+        /* ============================================================
+           DEBUG ПАНЕЛИ (АНГАР И БОЙ)
+           ============================================================ */
+        .debug-popup {
+            display: none;
+            position: absolute;
+            right: 20px;
+            top: 70px;
+            width: 365px;
+            background: rgba(15, 23, 42, 0.96);
+            color: #f1f5f9;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid #38bdf8;
+            font-family: monospace;
+            font-size: 12px;
+            z-index: 100;
+            max-height: 88vh;
+            overflow-y: auto;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+        }
+
+        .debug-popup::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .debug-popup::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 3px;
+        }
+
+        .debug-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            background: rgba(255, 255, 255, 0.04);
+            padding: 8px;
+            border-radius: 4px;
+        }
+
+        .debug-section-title {
+            font-weight: bold;
+            color: #94a3b8;
+            margin-bottom: 2px;
+        }
+
+        .debug-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            accent-color: #38bdf8;
+            margin: 2px 0 5px 0;
+            cursor: pointer;
+        }
+
+        .switch-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 2px;
+        }
+
+        .sw-btn {
+            flex: 1 1 calc(33.3% - 4px);
+            padding: 6px 2px;
+            font-size: 11px;
+            font-family: inherit;
+            background: #1e293b;
+            color: #94a3b8;
+            border: 1px solid #334155;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .sw-btn.active {
+            background: #0284c7;
+            color: #fff;
+            border-color: #38bdf8;
+            font-weight: bold;
+        }
+
+        .btn-action {
+            flex: 1;
+            padding: 7px;
+            border: none;
+            border-radius: 4px;
+            font-family: inherit;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 3D Контейнер рендера Three.js -->
+    <div id="webgl-container"></div>
+
+    <!-- ЭКРАН 1: ГАРАЖ -->
+    <div id="garage-screen" class="screen active">
+        <div class="garage-topbar">
+            <div class="logo-group">
+                <span class="logo-title">RETANKI REBORN</span>
+                <span class="garage-subtitle">// АНГАР</span>
+            </div>
+            <div class="topbar-actions">
+                <button id="btn-toggle-garage-debug" class="btn-debug-top">⚙ НАСТРОЙКИ [F4]</button>
+                <button id="btn-garage-battle" class="btn-battle-glow">В БОЙ ⚔</button>
+            </div>
+        </div>
+
+        <div class="garage-main-layout">
+            <div class="garage-panel">
+                <div class="garage-tabs">
+                    <button class="tab-btn active" data-tab="turrets">ПУШКИ</button>
+                    <button class="tab-btn" data-tab="hulls">КОРПУСА</button>
+                    <button class="tab-btn" data-tab="paints">КРАСКИ</button>
+                </div>
+
+                <div id="garage-items-grid" class="garage-items-grid"></div>
+
+                <div class="item-details-card">
+                    <div class="detail-header">
+                        <span id="detail-name">РЕЛЬСА</span>
+                        <span id="detail-tier">M0</span>
+                    </div>
+                    <p id="detail-desc">Крупнокалиберное орудие высокой точности.</p>
+                    <button id="btn-install-item" class="btn-install active-item">УСТАНОВЛЕНО</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ЭКРАН 2: БОЙ -->
+    <div id="battle-screen" class="screen">
+        <div id="flip-alert">ТАНК ОПРОКИНУТ! [R] для переворота</div>
+    </div>
+
+    <!-- ============================================================
+         DEBUG МЕНЮ АНГАРА: ТЮНИНГ КРАСКИ, ПОДИУМА И КАМЕРЫ
+         ============================================================ -->
+    <div id="garage-debug-menu" class="debug-popup">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; padding-bottom: 6px;">
+            <h3 style="margin: 0; color: #e5b326; font-size: 14px;">Тюнинг Ангара [F4]</h3>
+            <span id="btn-close-garage-debug" style="cursor: pointer; font-size: 16px; color: #94a3b8;">✖</span>
+        </div>
+
+        <!-- ТЮНИНГ КРАСКИ И НАЛОЖЕНИЯ -->
+        <div class="debug-section" style="background: rgba(34, 197, 94, 0.08); border: 1px solid rgba(34, 197, 94, 0.3);">
+            <span class="debug-section-title" style="color: #4ade80;">Камуфляж: Наложение и масштаб:</span>
+
+            <!-- Режим проекции -->
+            <div style="display: flex; gap: 4px; margin: 4px 0;">
+                <button id="sw-mode-uv" class="sw-btn active">По UV (Стабильно)</button>
+                <button id="sw-mode-tri" class="sw-btn">Трипланар (3D)</button>
+            </div>
+
+            <!-- Масштаб повторений -->
+            <div class="debug-label"><span>Масштаб повторений (Tile):</span><span id="v-p-scale">2.20</span></div>
+            <input id="t-p-scale" type="range" min="0.5" max="8.0" step="0.1">
+
+            <!-- Баланс между башней и корпусом -->
+            <div class="debug-label"><span>Баланс башни (Turret Mult):</span><span id="v-p-turret-mult">1.00</span></div>
+            <input id="t-p-turret-mult" type="range" min="0.30" max="2.50" step="0.05">
+
+            <!-- Поворот узора камуфляжа -->
+            <div class="debug-label"><span>Поворот узора (Angle):</span><span id="v-p-angle">0.00</span></div>
+            <input id="t-p-angle" type="range" min="-3.14" max="3.14" step="0.05">
+
+            <!-- Налёт грязи и нагар -->
+            <div class="debug-label"><span>Пыль и грязь у днища (Mud):</span><span id="v-p-mud">0.55</span></div>
+            <input id="t-p-mud" type="range" min="0.00" max="1.50" step="0.05">
+
+            <div class="debug-label"><span>Нагар в швах (Dirt):</span><span id="v-p-dirt">0.45</span></div>
+            <input id="t-p-dirt" type="range" min="0.00" max="1.50" step="0.05">
+
+            <!-- Шероховатость и металл -->
+            <div class="debug-label"><span>Шероховатость (Roughness):</span><span id="v-p-roughness">0.60</span></div>
+            <input id="t-p-roughness" type="range" min="0.05" max="1.00" step="0.05">
+
+            <div class="debug-label"><span>Металличность (Metalness):</span><span id="v-p-metalness">0.20</span></div>
+            <input id="t-p-metalness" type="range" min="0.00" max="1.00" step="0.05">
+
+            <button id="btn-copy-paint-cfg" class="btn-action" style="background: #15803d; color: white; margin-top: 4px;">📋 Скопировать конфиг краски</button>
+        </div>
+
+        <!-- Положение танка -->
+        <div class="debug-section" style="background: rgba(229, 179, 38, 0.08); border: 1px solid rgba(229, 179, 38, 0.3);">
+            <span class="debug-section-title" style="color: #e5b326;">Положение танка:</span>
+            <div class="debug-label"><span>Высота Y (Посадка):</span><span id="v-g-tankY">0.00</span></div>
+            <input id="t-g-tankY" type="range" min="-1.0" max="2.0" step="0.02">
+
+            <div class="debug-label"><span>Смещение Z:</span><span id="v-g-tankZ">0.00</span></div>
+            <input id="t-g-tankZ" type="range" min="-3.0" max="3.0" step="0.05">
+
+            <div class="debug-label"><span>Смещение X:</span><span id="v-g-tankX">0.00</span></div>
+            <input id="t-g-tankX" type="range" min="-3.0" max="3.0" step="0.05">
+
+            <div class="debug-label"><span>Масштаб:</span><span id="v-g-tankScale">0.00</span></div>
+            <input id="t-g-tankScale" type="range" min="0.4" max="2.2" step="0.02">
+
+            <div class="debug-label"><span>Поворот Y:</span><span id="v-g-tankRotY">0.00</span></div>
+            <input id="t-g-tankRotY" type="range" min="-3.14" max="3.14" step="0.05">
+        </div>
+
+        <!-- Камера Ангара -->
+        <div class="debug-section" style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.3);">
+            <span class="debug-section-title" style="color: #38bdf8;">Орбитальная камера:</span>
+            <div class="debug-label"><span>Дистанция:</span><span id="v-g-camDist">0.00</span></div>
+            <input id="t-g-camDist" type="range" min="4.0" max="25.0" step="0.2">
+
+            <div class="debug-label"><span>Высота:</span><span id="v-g-camHeight">0.00</span></div>
+            <input id="t-g-camHeight" type="range" min="-1.0" max="6.0" step="0.1">
+
+            <div class="debug-label"><span>Фокус взгляда Y:</span><span id="v-g-camTargetY">0.00</span></div>
+            <input id="t-g-camTargetY" type="range" min="0.0" max="3.0" step="0.05">
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px;">
+                <span>Авто-вращение:</span>
+                <input type="checkbox" id="t-g-autoRotate" style="width: 18px; height: 18px; cursor: pointer;">
+            </div>
+            <div class="debug-label" style="margin-top: 4px;"><span>Скорость:</span><span id="v-g-autoSpeed">0.00</span></div>
+            <input id="t-g-autoSpeed" type="range" min="0.05" max="1.0" step="0.05">
+        </div>
+
+        <div style="display: flex; gap: 6px; margin-top: 4px;">
+            <button id="btn-save-garage-cfg" class="btn-action" style="background: #22c55e; color: black;">Сохранить [Ctrl+S]</button>
+            <button id="btn-reset-garage-cfg" class="btn-action" style="background: #ef4444; color: white;">Сброс</button>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         DEBUG МЕНЮ БОЯ (КАЛИБРОВКА ХИТБОКСОВ, ПОДВЕСКИ И СПРАЙТОВ)
+         ============================================================ -->
+    <div id="debug-menu" class="debug-popup">
+        <h3 style="margin: 0; color: #38bdf8; text-align: center; font-size: 15px;">Панель Калибровки Боя [F4]</h3>
+
+        <div style="display: flex; gap: 6px;">
+            <button id="btn-flip-hull" class="btn-action" style="background: #0284c7; color: white;">Корпус 180°</button>
+            <button id="btn-flip-turret" class="btn-action" style="background: #0284c7; color: white;">Башня 180°</button>
+            <button id="btn-hitbox-toggle" class="btn-action" style="background: #475569; color: white;">Каркас [H]</button>
+        </div>
+
+        <button id="btn-autofit" class="btn-action" style="background: #eab308; color: black; margin-top: 2px;">⚡ Авто-подгон хитбоксов</button>
+
+        <!-- Быстрые переключатели техники -->
+        <div class="debug-section">
+            <span class="debug-section-title">Быстрое переключение:</span>
+            <div class="switch-group">
+                <button id="sw-hull-wasp" class="sw-btn">Wasp</button>
+                <button id="sw-hull-hornet" class="sw-btn">Hornet</button>
+                <button id="sw-hull-hunter" class="sw-btn">Hunter</button>
+                <button id="sw-hull-viking" class="sw-btn active">Viking</button>
+                <button id="sw-hull-dictator" class="sw-btn">Dictator</button>
+                <button id="sw-hull-titan" class="sw-btn">Titan</button>
+                <button id="sw-hull-mammoth" class="sw-btn">Mammoth</button>
+            </div>
+            <div class="switch-group" style="margin-top: 4px;">
+                <button id="sw-turret-smoky" class="sw-btn">Smoky</button>
+                <button id="sw-turret-firebird" class="sw-btn">Firebird</button>
+                <button id="sw-turret-twins" class="sw-btn">Twins</button>
+                <button id="sw-turret-railgun" class="sw-btn active">Railgun</button>
+                <button id="sw-turret-isida" class="sw-btn">Isida</button>
+                <button id="sw-turret-thunder" class="sw-btn">Thunder</button>
+                <button id="sw-turret-freeze" class="sw-btn">Freeze</button>
+                <button id="sw-turret-ricochet" class="sw-btn">Ricochet</button>
+                <button id="sw-turret-shaft" class="sw-btn">Shaft</button>
+                <button id="sw-turret-hammer" class="sw-btn">Hammer</button>
+                <button id="sw-turret-vulcan" class="sw-btn">Vulcan</button>
+            </div>
+            <div class="switch-group" style="margin-top: 4px;">
+                <button id="sw-paint-green" class="sw-btn active">Зелёный</button>
+                <button id="sw-paint-flora" class="sw-btn">Флора</button>
+                <button id="sw-paint-metallic" class="sw-btn">Металлик</button>
+                <button id="sw-paint-lava" class="sw-btn">Лава</button>
+                <button id="sw-paint-apple" class="sw-btn">Яблоко</button>
+            </div>
+        </div>
+
+        <!-- Посадка и масштаб моделей в бою -->
+        <div class="debug-section" style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.3);">
+            <span class="debug-section-title" style="color: #38bdf8;">Визуал: Посадка и Масштаб:</span>
+            <div class="debug-label"><span>Посадка корпуса Y:</span><span id="v-hullVisualY">0.00</span></div>
+            <input id="t-hullVisualY" type="range" min="-0.80" max="0.20" step="0.01">
+
+            <div class="debug-label"><span>Масштаб корпуса:</span><span id="v-hullScale">0.00</span></div>
+            <input id="t-hullScale" type="range" min="0.50" max="1.80" step="0.02">
+
+            <div class="debug-label"><span>Масштаб башни:</span><span id="v-turretScale">0.00</span></div>
+            <input id="t-turretScale" type="range" min="0.40" max="1.80" step="0.02">
+        </div>
+
+        <!-- Погон и пивот башни -->
+        <div class="debug-section">
+            <span class="debug-section-title" style="color: #f59e0b;">Башня: Погон и Пивот:</span>
+            <div class="debug-label"><span>Mount X:</span><span id="v-mountX">0.00</span></div>
+            <input id="t-mountX" type="range" min="-1.5" max="1.5" step="0.02">
+
+            <div class="debug-label"><span>Mount Y:</span><span id="v-mountY">0.00</span></div>
+            <input id="t-mountY" type="range" min="0.5" max="2.2" step="0.02">
+
+            <div class="debug-label"><span>Mount Z:</span><span id="v-mountZ">0.00</span></div>
+            <input id="t-mountZ" type="range" min="-1.5" max="1.5" step="0.02">
+
+            <div class="debug-label"><span>Pivot X:</span><span id="v-pivotX">0.00</span></div>
+            <input id="t-pivotX" type="range" min="-1.5" max="1.5" step="0.02">
+
+            <div class="debug-label"><span>Pivot Y:</span><span id="v-pivotY">0.00</span></div>
+            <input id="t-pivotY" type="range" min="-0.5" max="1.0" step="0.02">
+
+            <div class="debug-label"><span>Pivot Z:</span><span id="v-pivotZ">0.00</span></div>
+            <input id="t-pivotZ" type="range" min="-1.5" max="2.5" step="0.02">
+        </div>
+
+        <!-- Хитбокс башни -->
+        <div class="debug-section">
+            <span class="debug-section-title" style="color: #38bdf8;">Башня: Хитбокс (Голубой):</span>
+            <div class="debug-label"><span>Ширина:</span><span id="v-tboxW">0.00</span></div>
+            <input id="t-tboxW" type="range" min="0.5" max="3.0" step="0.05">
+
+            <div class="debug-label"><span>Длина:</span><span id="v-tboxL">0.00</span></div>
+            <input id="t-tboxL" type="range" min="1.0" max="6.0" step="0.10">
+
+            <div class="debug-label"><span>Высота:</span><span id="v-tboxH">0.00</span></div>
+            <input id="t-tboxH" type="range" min="0.2" max="1.8" step="0.05">
+
+            <div class="debug-label"><span>Смещение Z:</span><span id="v-tboxZ">0.00</span></div>
+            <input id="t-tboxZ" type="range" min="-1.0" max="3.0" step="0.05">
+
+            <div class="debug-label"><span>Смещение Y:</span><span id="v-tboxY">0.00</span></div>
+            <input id="t-tboxY" type="range" min="-0.5" max="1.5" step="0.05">
+        </div>
+
+        <!-- Хитбокс корпуса -->
+        <div class="debug-section">
+            <span class="debug-section-title" style="color: #22c55e;">Корпус: Хитбокс (Зеленый):</span>
+            <div class="debug-label"><span>Ширина:</span><span id="v-hboxW">0.00</span></div>
+            <input id="t-hboxW" type="range" min="1.8" max="4.5" step="0.05">
+
+            <div class="debug-label"><span>Длина:</span><span id="v-hboxL">0.00</span></div>
+            <input id="t-hboxL" type="range" min="2.5" max="6.5" step="0.05">
+
+            <div class="debug-label"><span>Высота:</span><span id="v-hboxH">0.00</span></div>
+            <input id="t-hboxH" type="range" min="0.3" max="1.6" step="0.05">
+
+            <div class="debug-label"><span>Клиренс коллайдера Y:</span><span id="v-hboxOffY">0.00</span></div>
+            <input id="t-hboxOffY" type="range" min="0.2" max="1.0" step="0.02">
+        </div>
+
+        <!-- Подвеска -->
+        <div class="debug-section">
+            <span class="debug-section-title">Подвеска: Опорные катки:</span>
+            <div class="debug-label"><span>Ширина колеи:</span><span id="v-trackWidth">0.00</span></div>
+            <input id="t-trackWidth" type="range" min="0.70" max="1.20" step="0.02">
+
+            <div class="debug-label"><span>Длина базы:</span><span id="v-trackLength">0.00</span></div>
+            <input id="t-trackLength" type="range" min="1.20" max="2.30" step="0.02">
+
+            <div class="debug-label"><span>Высота истока лучей:</span><span id="v-rayOriginY">0.00</span></div>
+            <input id="t-rayOriginY" type="range" min="0.02" max="0.40" step="0.01">
+
+            <div class="debug-label"><span>Длина хода пружин:</span><span id="v-restLen">0.00</span></div>
+            <input id="t-restLen" type="range" min="0.50" max="1.60" step="0.05">
+
+            <div class="debug-label"><span>Жесткость:</span><span id="v-stiffness">0.00</span></div>
+            <input id="t-stiffness" type="range" min="20000" max="160000" step="2000">
+
+            <div class="debug-label"><span>Амортизация:</span><span id="v-damping">0.00</span></div>
+            <input id="t-damping" type="range" min="1000" max="12000" step="200">
+
+            <div class="debug-label"><span>Сила тяги:</span><span id="v-driveForce">0.00</span></div>
+            <input id="t-driveForce" type="range" min="10000" max="140000" step="2000">
+
+            <div class="debug-label"><span>Момент поворота:</span><span id="v-turnTorque">0.00</span></div>
+            <input id="t-turnTorque" type="range" min="10000" max="90000" step="1000">
+        </div>
+
+        <!-- Боевая камера -->
+        <div class="debug-section">
+            <span class="debug-section-title" style="color: #e2e8f0;">Боевая камера (Alternativa3D):</span>
+            <div class="debug-label"><span>Дистанция:</span><span id="v-camDist">0.00</span></div>
+            <input id="t-camDist" type="range" min="8.0" max="25.0" step="0.5">
+
+            <div class="debug-label"><span>Высота:</span><span id="v-camHeight">0.00</span></div>
+            <input id="t-camHeight" type="range" min="3.0" max="12.0" step="0.2">
+
+            <div class="debug-label"><span>Точка взгляда Y:</span><span id="v-camLookY">0.00</span></div>
+            <input id="t-camLookY" type="range" min="0.5" max="3.5" step="0.1">
+
+            <div class="debug-label"><span>Плавность хода (Lag):</span><span id="v-camLag">0.00</span></div>
+            <input id="t-camLag" type="range" min="2.0" max="20.0" step="0.5">
+        </div>
+
+        <!-- НАСТРОЙКА СПРАЙТОВ ОРУЖИЯ (FREEZE / FIREBIRD) -->
+        <div class="debug-section" style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.3);">
+            <span class="debug-section-title" style="color: #38bdf8;">Спрайты струи (Live Tuning):</span>
+            
+            <div class="debug-label"><span>Поворот X (°):</span><span id="v-w-rotX">-90</span></div>
+            <input type="range" id="t-w-rotX" min="-180" max="180" step="5">
+
+            <div class="debug-label"><span>Поворот Y (°):</span><span id="v-w-rotY">0</span></div>
+            <input type="range" id="t-w-rotY" min="-180" max="180" step="5">
+
+            <div class="debug-label"><span>Поворот Z (°):</span><span id="v-w-rotZ">0</span></div>
+            <input type="range" id="t-w-rotZ" min="-180" max="180" step="5">
+
+            <div class="debug-label"><span>Смещение Y (высота):</span><span id="v-w-offY">0.35</span></div>
+            <input type="range" id="t-w-offY" min="-1.5" max="1.5" step="0.05">
+
+            <div class="debug-label"><span>Смещение Z (дуло):</span><span id="v-w-offZ">0.00</span></div>
+            <input type="range" id="t-w-offZ" min="-1.5" max="2.5" step="0.05">
+
+            <div class="debug-label"><span>Стартовый размер:</span><span id="v-w-scaleStart">1.15</span></div>
+            <input type="range" id="t-w-scaleStart" min="0.2" max="3.0" step="0.05">
+
+            <div class="debug-label"><span>Конечный размер:</span><span id="v-w-scaleEnd">3.80</span></div>
+            <input type="range" id="t-w-scaleEnd" min="1.0" max="8.0" step="0.1">
+
+            <div class="debug-label"><span>Скорость вылета:</span><span id="v-w-speed">22.0</span></div>
+            <input type="range" id="t-w-speed" min="10" max="50" step="1">
+        </div>
+
+        <div style="display: flex; gap: 6px; margin-top: 4px;">
+            <button id="btn-save-cfg" class="btn-action" style="background: #22c55e; color: black;">Сохранить [Ctrl+S]</button>
+            <button id="btn-reset-cfg" class="btn-action" style="background: #ef4444; color: white;">Сброс</button>
+        </div>
+    </div>
+
+    <!-- Подключение главного модуля Vite -->
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

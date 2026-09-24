@@ -1,0 +1,15 @@
+{
+  "id": "arena",
+  "name": "Арена",
+  "gravity": -20.0,
+  "ambientColor": "#b4c6d4",
+  "ambientIntensity": 1.25,
+  "sunColor": "#fff8ed",
+  "sunIntensity": 1.85,
+  "sunPosition": [45.0, 75.0, -35.0],
+  "fogColor": "#9bb3c7",
+  "fogNear": 45.0,
+  "fogFar": 190.0,
+  "supportedModes": ["DM", "TDM", "CTF"],
+  "defaultMode": "DM"
+}

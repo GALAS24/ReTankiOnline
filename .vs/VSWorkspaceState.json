@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\client",
+    "\\client\\public",
+    "\\client\\src",
+    "\\client\\src\\audio",
+    "\\client\\src\\combat",
+    "\\client\\src\\game",
+    "\\client\\src\\game\\entities",
+    "\\client\\src\\graphics",
+    "\\client\\src\\network"
+  ],
+  "SelectedNode": "\\client\\src\\main.ts",
+  "PreviewInSolutionExplorer": false
+}

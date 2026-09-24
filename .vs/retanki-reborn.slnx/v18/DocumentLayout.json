@@ -1,0 +1,593 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\network\\NetworkManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\network\\NetworkManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\physics\\TankPhysicsController.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\physics\\TankPhysicsController.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\ui\\GarageUI.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\ui\\GarageUI.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\ui\\Router.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\ui\\Router.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\ui\\ZoneEditorUI.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\ui\\ZoneEditorUI.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\game\\entities\\Tank.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\game\\entities\\Tank.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\physics\\RemoteTank.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\physics\\RemoteTank.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\src\\core\\Room.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\src\\core\\Room.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\combat\\WeaponManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\combat\\WeaponManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\src\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\src\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\shared\\types.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:shared\\types.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\shared\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:shared\\index.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\shared\\constants.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:shared\\constants.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\VFXManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\graphics\\VFXManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\polygon_test.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:polygon_test.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\combat\\DropBoxManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\combat\\DropBoxManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\ui\\BattleHUD.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\ui\\BattleHUD.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\src\\core\\PhysicsWorld.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:server\\src\\core\\PhysicsWorld.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\tsconfig.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\audio\\AudioManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\audio\\AudioManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\TrackMarksManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\graphics\\TrackMarksManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\AssetLoader.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\graphics\\AssetLoader.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\SpriteSheetCutter.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\graphics\\SpriteSheetCutter.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\physics\\SpawnManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\physics\\SpawnManager.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\retanki-reborn\\client\\public\\maps\\map.glb||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\retanki-reborn\\converter.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\MapParser.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\graphics\\MapParser.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\Renderer.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\src\\graphics\\Renderer.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\package.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:client\\package-lock.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GarageUI.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\ui\\GarageUI.ts",
+              "RelativeDocumentMoniker": "client\\src\\ui\\GarageUI.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\ui\\GarageUI.ts",
+              "RelativeToolTip": "client\\src\\ui\\GarageUI.ts",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAgwPIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-24T18:43:17.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "vite.config.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\vite.config.ts",
+              "RelativeDocumentMoniker": "client\\vite.config.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\vite.config.ts",
+              "RelativeToolTip": "client\\vite.config.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-24T18:43:08.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Tank.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\game\\entities\\Tank.ts",
+              "RelativeDocumentMoniker": "client\\src\\game\\entities\\Tank.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\game\\entities\\Tank.ts",
+              "RelativeToolTip": "client\\src\\game\\entities\\Tank.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-24T18:43:01.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "index.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\src\\index.ts",
+              "RelativeDocumentMoniker": "server\\src\\index.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\src\\index.ts",
+              "RelativeToolTip": "server\\src\\index.ts",
+              "ViewState": "AgIAAEgAAAAAAAAAAADwv3IAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-15T13:36:56.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "types.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\shared\\types.ts",
+              "RelativeDocumentMoniker": "shared\\types.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\shared\\types.ts",
+              "RelativeToolTip": "shared\\types.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-23T14:09:47.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Room.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\src\\core\\Room.ts",
+              "RelativeDocumentMoniker": "server\\src\\core\\Room.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\src\\core\\Room.ts",
+              "RelativeToolTip": "server\\src\\core\\Room.ts",
+              "ViewState": "AgIAADoBAAAAAAAAAAAAwFcBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-15T13:37:11.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NetworkManager.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\network\\NetworkManager.ts",
+              "RelativeDocumentMoniker": "client\\src\\network\\NetworkManager.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\network\\NetworkManager.ts",
+              "RelativeToolTip": "client\\src\\network\\NetworkManager.ts",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAgwAIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-23T14:32:24.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RemoteTank.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\physics\\RemoteTank.ts",
+              "RelativeDocumentMoniker": "client\\src\\physics\\RemoteTank.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\physics\\RemoteTank.ts",
+              "RelativeToolTip": "client\\src\\physics\\RemoteTank.ts",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAAwCsBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-15T13:43:13.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WeaponManager.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\combat\\WeaponManager.ts",
+              "RelativeDocumentMoniker": "client\\src\\combat\\WeaponManager.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\combat\\WeaponManager.ts",
+              "RelativeToolTip": "client\\src\\combat\\WeaponManager.ts",
+              "ViewState": "AgIAAKoGAAAAAAAAAAAAwMcGAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-20T17:06:43.608Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\main.ts",
+              "RelativeDocumentMoniker": "client\\src\\main.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\main.ts",
+              "RelativeToolTip": "client\\src\\main.ts",
+              "ViewState": "AgIAAJIEAAAAAAAAAAAAwNUEAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-15T13:39:59.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "index.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\shared\\index.ts",
+              "RelativeDocumentMoniker": "shared\\index.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\shared\\index.ts",
+              "RelativeToolTip": "shared\\index.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-23T14:11:03.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "constants.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\shared\\constants.ts",
+              "RelativeDocumentMoniker": "shared\\constants.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\shared\\constants.ts",
+              "RelativeToolTip": "shared\\constants.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-15T13:44:02.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "VFXManager.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\VFXManager.ts",
+              "RelativeDocumentMoniker": "client\\src\\graphics\\VFXManager.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\VFXManager.ts",
+              "RelativeToolTip": "client\\src\\graphics\\VFXManager.ts",
+              "ViewState": "AgIAAD0BAAAAAAAAAAAAwF0BAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-24T13:58:55.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Router.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\ui\\Router.ts",
+              "RelativeDocumentMoniker": "client\\src\\ui\\Router.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\ui\\Router.ts",
+              "RelativeToolTip": "client\\src\\ui\\Router.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-15T14:10:54.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ZoneEditorUI.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\ui\\ZoneEditorUI.ts",
+              "RelativeDocumentMoniker": "client\\src\\ui\\ZoneEditorUI.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\ui\\ZoneEditorUI.ts",
+              "RelativeToolTip": "client\\src\\ui\\ZoneEditorUI.ts",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAQwLEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-23T20:11:38.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TankPhysicsController.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\physics\\TankPhysicsController.ts",
+              "RelativeDocumentMoniker": "client\\src\\physics\\TankPhysicsController.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\physics\\TankPhysicsController.ts",
+              "RelativeToolTip": "client\\src\\physics\\TankPhysicsController.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-15T14:11:16.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "polygon_test.png",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\polygon_test.png",
+              "RelativeDocumentMoniker": "polygon_test.png",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\polygon_test.png",
+              "RelativeToolTip": "polygon_test.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-09-24T13:54:57.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DropBoxManager.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\combat\\DropBoxManager.ts",
+              "RelativeDocumentMoniker": "client\\src\\combat\\DropBoxManager.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\combat\\DropBoxManager.ts",
+              "RelativeToolTip": "client\\src\\combat\\DropBoxManager.ts",
+              "ViewState": "AgIAAEcCAAAAAAAAAAAAwGcCAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-20T20:50:29.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BattleHUD.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\ui\\BattleHUD.ts",
+              "RelativeDocumentMoniker": "client\\src\\ui\\BattleHUD.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\ui\\BattleHUD.ts",
+              "RelativeToolTip": "client\\src\\ui\\BattleHUD.ts",
+              "ViewState": "AgIAAI8DAAAAAAAAAAAmwLUDAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-23T16:13:40.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "tsconfig.json",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\tsconfig.json",
+              "RelativeDocumentMoniker": "server\\tsconfig.json",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\tsconfig.json",
+              "RelativeToolTip": "server\\tsconfig.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-23T14:11:40.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\package.json",
+              "RelativeDocumentMoniker": "server\\package.json",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\package.json",
+              "RelativeToolTip": "server\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-23T14:17:56.076Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "PhysicsWorld.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\src\\core\\PhysicsWorld.ts",
+              "RelativeDocumentMoniker": "server\\src\\core\\PhysicsWorld.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\server\\src\\core\\PhysicsWorld.ts",
+              "RelativeToolTip": "server\\src\\core\\PhysicsWorld.ts",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAswHYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-15T13:37:23.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "tsconfig.json",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\tsconfig.json",
+              "RelativeDocumentMoniker": "client\\tsconfig.json",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\tsconfig.json",
+              "RelativeToolTip": "client\\tsconfig.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-15T14:35:05.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "SpriteSheetCutter.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\SpriteSheetCutter.ts",
+              "RelativeDocumentMoniker": "client\\src\\graphics\\SpriteSheetCutter.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\SpriteSheetCutter.ts",
+              "RelativeToolTip": "client\\src\\graphics\\SpriteSheetCutter.ts",
+              "ViewState": "AgIAAB0AAAAAAAAAAIAwwCQAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-20T17:39:22.92Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "TrackMarksManager.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\TrackMarksManager.ts",
+              "RelativeDocumentMoniker": "client\\src\\graphics\\TrackMarksManager.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\TrackMarksManager.ts",
+              "RelativeToolTip": "client\\src\\graphics\\TrackMarksManager.ts",
+              "ViewState": "AgIAAMgAAAAAAAAAAAAYwNwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-22T16:39:45.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "AudioManager.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\audio\\AudioManager.ts",
+              "RelativeDocumentMoniker": "client\\src\\audio\\AudioManager.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\audio\\AudioManager.ts",
+              "RelativeToolTip": "client\\src\\audio\\AudioManager.ts",
+              "ViewState": "AgIAAGQBAAAAAAAAAAAYwIEBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-22T16:40:09.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "map.glb",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\retanki-reborn\\client\\public\\maps\\map.glb",
+              "RelativeDocumentMoniker": "..\\..\\retanki-reborn\\client\\public\\maps\\map.glb",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\retanki-reborn\\client\\public\\maps\\map.glb",
+              "RelativeToolTip": "..\\..\\retanki-reborn\\client\\public\\maps\\map.glb",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-09-16T15:15:16.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SpawnManager.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\physics\\SpawnManager.ts",
+              "RelativeDocumentMoniker": "client\\src\\physics\\SpawnManager.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\physics\\SpawnManager.ts",
+              "RelativeToolTip": "client\\src\\physics\\SpawnManager.ts",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAowI0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-16T15:10:44.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\index.html",
+              "RelativeDocumentMoniker": "client\\index.html",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\index.html",
+              "RelativeToolTip": "client\\index.html",
+              "ViewState": "AgIAAEYBAAAAAAAAAAAqwHIBAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-09-15T13:39:10.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "AssetLoader.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\AssetLoader.ts",
+              "RelativeDocumentMoniker": "client\\src\\graphics\\AssetLoader.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\AssetLoader.ts",
+              "RelativeToolTip": "client\\src\\graphics\\AssetLoader.ts",
+              "ViewState": "AgIAAEMAAAAAAAAAAIAwwFkAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-15T13:39:43.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "converter.html",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\retanki-reborn\\converter.html",
+              "RelativeDocumentMoniker": "..\\..\\retanki-reborn\\converter.html",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\retanki-reborn\\converter.html",
+              "RelativeToolTip": "..\\..\\retanki-reborn\\converter.html",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-09-15T18:46:52.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "MapParser.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\MapParser.ts",
+              "RelativeDocumentMoniker": "client\\src\\graphics\\MapParser.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\MapParser.ts",
+              "RelativeToolTip": "client\\src\\graphics\\MapParser.ts",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAqwIMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-15T18:39:56.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Renderer.ts",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\Renderer.ts",
+              "RelativeDocumentMoniker": "client\\src\\graphics\\Renderer.ts",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\src\\graphics\\Renderer.ts",
+              "RelativeToolTip": "client\\src\\graphics\\Renderer.ts",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwD8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-09-15T13:39:31.634Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "package.json",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\package.json",
+              "RelativeDocumentMoniker": "client\\package.json",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\package.json",
+              "RelativeToolTip": "client\\package.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-15T14:13:27.466Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "package-lock.json",
+              "DocumentMoniker": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\package-lock.json",
+              "RelativeDocumentMoniker": "client\\package-lock.json",
+              "ToolTip": "C:\\Users\\danii\\Desktop\\\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430 (10)\\retanki-reborn\\client\\package-lock.json",
+              "RelativeToolTip": "client\\package-lock.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-09-15T14:13:26.434Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

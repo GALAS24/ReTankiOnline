@@ -1,0 +1,19 @@
+# Зависимости
+node_modules/
+package-lock.json
+
+# Кэш сборщиков и логов
+.vite/
+dist/
+build/
+*.log
+
+# Файлы операционной системы и редакторов
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Временные переменные окружения
+.env
+.env.local
